@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Work with Alina",
@@ -32,15 +33,26 @@ export default function WorkWithMePage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       {/* Page header */}
-      <div className="max-w-2xl mb-16">
-        <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">
-          Work with Alina
-        </h1>
-        <p className="text-lg md:text-xl text-muted leading-relaxed">
-          Alina is available for keynote speaking, panel appearances, and
-          consulting engagements at the intersection of technology, platforms,
-          and the creator economy.
-        </p>
+      <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start mb-16">
+        <div className="max-w-2xl">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">
+            Work with Alina
+          </h1>
+          <p className="text-lg md:text-xl text-muted leading-relaxed">
+            Alina is available for keynote speaking, panel appearances, and
+            consulting engagements at the intersection of technology, platforms,
+            and the creator economy.
+          </p>
+        </div>
+        <div className="relative w-full md:w-80 flex-shrink-0 overflow-hidden rounded-sm shadow-lg" style={{ aspectRatio: "4/3" }}>
+          <Image
+            src="/images/alina-speaking.jpg"
+            alt="Alina Verbenchuk speaking at YouTube"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
       </div>
 
       {/* Cards */}

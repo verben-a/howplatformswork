@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -13,28 +14,16 @@ export default function AboutPage() {
         {/* Author headshot */}
         <aside className="md:w-72 flex-shrink-0">
           <div
-            className="w-full md:w-64 overflow-hidden rounded-sm bg-border shadow-lg"
+            className="relative w-full md:w-64 overflow-hidden rounded-sm shadow-lg"
             style={{ aspectRatio: "3/4" }}
           >
-            {/*
-              ─── SWAP IN YOUR HEADSHOT ──────────────────────────────────────
-              1. Copy your photo to /public/images/alina-verbenchuk.jpg
-              2. Replace this <div> with:
-
-                 <Image
-                   src="/images/alina-verbenchuk.jpg"
-                   alt="Alina Verbenchuk"
-                   fill
-                   className="object-cover"
-                   priority
-                 />
-
-              3. Add   import Image from "next/image";   at the top.
-              4. Wrap the outer div with   className="relative ..."
-              ─────────────────────────────────────────────────────────────── */}
-            <div className="flex h-full w-full items-center justify-center text-muted text-sm p-4 text-center">
-              [Headshot placeholder<br />— 3:4 ratio]
-            </div>
+            <Image
+              src="/images/alina-headshot.jpg"
+              alt="Alina Verbenchuk"
+              fill
+              className="object-cover object-top"
+              priority
+            />
           </div>
 
           {/* Social links */}
