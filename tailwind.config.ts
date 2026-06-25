@@ -10,8 +10,8 @@ const config: Config = {
       colors: {
         background: "#FAF9F7",
         foreground: "#111111",
-        accent: "#1B3A5C", // deep navy
-        "accent-light": "#2A5580",
+        accent: "#1A3D2B", // dark forest green
+        "accent-light": "#2A5C3F",
         muted: "#6B7280",
         border: "#E5E2DC",
       },
